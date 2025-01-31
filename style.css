@@ -12,6 +12,28 @@ body {
   background-color: #F5F5DC;
 }
 
+/* Styl przycisków w nagłówku */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-booksy {
+  background: #D9BA8C; /* Kolor przycisku */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.btn-booksy:hover {
+  background: #C0A073; /* Ciemniejszy odcień po najechaniu */
+}
+
 /* Nagłówek */
 .hero {
   position: relative;
