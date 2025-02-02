@@ -203,7 +203,7 @@ body {
 /* Zmniejszenie zdjęcia dla wersji mobilnej */
 @media (max-width: 768px) {
   .about-image img {
-    max-width: 250px; /* Dostosuj rozmiar */
+    max-width: 220px; /* Dostosuj rozmiar */
     height: auto; /* Zachowanie proporcji */
   }
 }
