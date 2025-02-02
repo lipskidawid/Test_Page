@@ -147,6 +147,9 @@ body {
   .btn {
     display: none;
   }
+  .hero {
+    height: auto;
+  }
 }
 
 /* Sekcja "O mnie" */
