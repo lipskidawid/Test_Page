@@ -12,6 +12,69 @@ body {
   background-color: #F5F5DC;
 }
 
+/* Pasek kontaktowy u góry */
+.top-bar {
+  background: #333; /* Ciemne tło */
+  color: #fff;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.top-bar .contact-info {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.top-bar .contact-info i {
+  margin-right: 0.5rem;
+}
+
+/* Sekcja po prawej: ikony i przycisk */
+.top-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Ikony social media */
+.top-bar .social-links a {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.top-bar .social-links a:hover {
+  color: #806248;
+}
+
+/* Przyciski */
+.btn-booksy-top {
+  background: #a5907b;;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn-booksy-top:hover {
+  background: #806248;
+}
+
+/* Responsywność dla telefonów */
+@media (max-width: 768px) {
+  .top-bar {
+    display: none;
+  }
+}
+
 /* Styl przycisków w nagłówku */
 .hero-buttons {
   display: flex;
@@ -21,10 +84,9 @@ body {
 }
 
 /* Nagłówek */
-/* Nagłówek */
 .hero {
   position: relative;
-  height: 40vh; /* Domyślnie */
+  height: 30vh; /* Domyślnie */
   background: url('tło.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
@@ -61,7 +123,7 @@ body {
 
 .btn {
   padding: 0.75rem 2rem;
-  background: #D9BA8C;
+  background: #a5907b;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -69,7 +131,22 @@ body {
 }
 
 .btn:hover {
-  background: #C0A073;
+  background: #806248;
+}
+
+/* Imię i nazwisko w nagłówku */
+.owner-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #D9BA8C; /* Podkreślenie eleganckim kolorem */
+  margin-bottom: 0.5rem;
+}
+
+/* Responsywność dla telefonów */
+@media (max-width: 768px) {
+  .btn {
+    display: none;
+  }
 }
 
 /* Sekcja "O mnie" */
@@ -120,23 +197,32 @@ body {
   color: #555;
 }
 
+/* Zmniejszenie zdjęcia dla wersji mobilnej */
+@media (max-width: 768px) {
+  .about-image img {
+    max-width: 250px; /* Dostosuj rozmiar */
+    height: auto; /* Zachowanie proporcji */
+  }
+}
+
 /* Sekcja Cennik */
 .pricing {
   padding: 2rem 1rem;
   text-align: center;
-  background: #F5F5DC;
+  background: #d4cabc; /* Jasne tło */
 }
 
 .pricing h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
-  color: #333;
+  color: #50311d; /* Brązowy kolor */
+  font-family: 'Playfair Display', serif;
 }
 
 .pricing-list {
   max-width: 800px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 2rem;
   background: #fff;
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -145,7 +231,8 @@ body {
 .pricing-item {
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  align-items: center;
+  padding: 1rem 0;
   border-bottom: 1px solid #f0f0f0;
 }
 
@@ -154,14 +241,29 @@ body {
 }
 
 .service {
+  text-align: left;
   font-size: 1rem;
   color: #333;
 }
 
+.service p {
+  font-size: 0.9rem;
+  color: #777;
+  font-style: italic;
+}
+
 .price {
-  font-size: 1rem;
-  color: #D9BA8C;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: right;
+  color: #806248;
+}
+
+.additional-info {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #50311d;
 }
 
 .pricing-button {
@@ -171,7 +273,7 @@ body {
 
 .pricing-button .btn-booksy {
   display: inline-block;
-  background: #D9BA8C; /* Dopasowany kolor */
+  background: #a5907b; /* Dopasowany kolor */
   color: #fff;
   text-decoration: none;
   padding: 0.75rem 2rem;
@@ -181,8 +283,37 @@ body {
 }
 
 .pricing-button .btn-booksy:hover {
-  background: #C0A073;
+  background: #806248;
 }
+
+@media (max-width: 768px) {
+  .pricing-item {
+    flex-direction: row; /* Ustawienie elementów w jednej linii */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .service strong{
+    font-size: 1rem;
+    flex: 1; /* Pozwala na dopasowanie szerokości */
+    text-align: left;
+  }
+
+  .service p{
+    font-size: 0.8rem;
+    flex: 1; /* Pozwala na dopasowanie szerokości */
+    text-align: left;
+  }
+  
+  .price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #806248;
+    flex-shrink: 0; /* Zapobiega ściskaniu ceny */
+  }
+}
+
 
 
 /* Sekcja Kontakt */
@@ -235,7 +366,7 @@ body {
 }
 
 .social-links a:hover {
-  color: #D9BA8C;
+  color: #806248;
 }
 
 .social-links p {
