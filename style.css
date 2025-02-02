@@ -148,7 +148,7 @@ body {
     display: none;
   }
   .hero {
-    height: auto;
+    height: max-content;
   }
 }
 
