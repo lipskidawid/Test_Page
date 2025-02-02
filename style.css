@@ -20,30 +20,18 @@ body {
   flex-wrap: wrap;
 }
 
-.btn-booksy {
-  background: #D9BA8C; /* Kolor przycisku */
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  padding: 0.75rem 2rem;
-  font-size: 1rem;
-  transition: background 0.3s ease;
-}
-
-.btn-booksy:hover {
-  background: #C0A073; /* Ciemniejszy odcień po najechaniu */
-}
-
+/* Nagłówek */
 /* Nagłówek */
 .hero {
   position: relative;
-  height: 40vh;
+  height: 40vh; /* Domyślnie */
   background: url('tło.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
+  padding: 1rem;
 }
 
 .hero-overlay {
@@ -58,6 +46,7 @@ body {
 .hero-content {
   z-index: 1;
   animation: fadeIn 2s ease-in-out;
+  max-width: 90%;
 }
 
 .hero h1 {
@@ -174,6 +163,27 @@ body {
   color: #D9BA8C;
   font-weight: 600;
 }
+
+.pricing-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pricing-button .btn-booksy {
+  display: inline-block;
+  background: #D9BA8C; /* Dopasowany kolor */
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.pricing-button .btn-booksy:hover {
+  background: #C0A073;
+}
+
 
 /* Sekcja Kontakt */
 .contact {
